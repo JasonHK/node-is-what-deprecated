@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "lib",
+        "lib": [
+            "es2017",
+            "esnext",
+            "esnext.bigint",
+        ],
+        "paths": {
+            "*": [
+                "*",
+                "node_modules/*",
+                "src/types/*",
+            ]
+        },
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": false,
+        "strictNullChecks": false,
+    },
+    "files": [
+        "src/index.ts",
+    ],
+    "include": [
+        "src/**/*",
+        "spec/**/*",
+    ],
+    "exclude": [
+        "src/**/*.spec.ts",
+    ],
+}

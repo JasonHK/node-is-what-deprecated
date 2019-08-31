@@ -1,0 +1,95 @@
+{
+	// Place your node-is-what workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Assertion Function (Simple) Boilerplate": {
+		"description": "Create a new assertion function with the boilerplate",
+		"scope": "typescript",
+		"prefix": "src:new-assertion",
+		"body": [
+			"\"use strict\";",
+			"",
+			"export function is${1:What}(payload: unknown): payload is ${2:any} {",
+			"",
+			"    return ${0:true};",
+			"}",
+			"",
+			"export default is${1:What}",
+			"",
+		],
+	},
+	"Assertion Function (Instance) Boilerplate": {
+		"description": "Create a new assertion function with the boilerplate",
+		"scope": "typescript",
+		"prefix": "src:new-assertion-instance",
+		"body": [
+			"\"use strict\";",
+			"",
+			"import { isInstanceType } from \"./is-instance-type\";",
+			"import { isObject } from \"./is-object\";",
+			"",
+			"export function is${1:What}(payload: unknown): payload is ${2:any} {",
+			"",
+			"    return ${0:true};",
+			"}",
+			"",
+			"export default is${1:What};",
+			"",
+		],
+	},
+	"Assertion Function (Advanced) Boilerplate": {
+		"description": "Create a new assertion function with the boilerplate",
+		"scope": "typescript",
+		"prefix": "src:new-assertion-advanced",
+		"body": [
+			"\"use strict\";",
+			"",
+			"${3:/* Import Assertion Functions Here */}",
+			"",
+			"export function is${1:What}(payload: unknown): payload is ${2:any} {",
+			"",
+			"    return ${0:true};",
+			"}",
+			"",
+			"export default is${1:What}",
+			"",
+		],
+	},
+	"Import Assertion Function": {
+		"description": "Import a assertion function to the module of the assertion function",
+		"scope": "typescript",
+		"prefix": "src:import-assertion",
+		"body": "import { $2 } from \"./$1\";",
+	},
+	"Import Utility Function": {
+		"description": "Import a utility function to the module of the assertion function",
+		"scope": "typescript",
+		"prefix": "src:import-utility",
+		"body": "import { $2 } from \"./utilities/$1\";",
+	},
+	"Insert TSDoc Definition": {
+		"description": "Insert a TSDoc definition to the assertion function",
+		"scope": "typescript",
+		"prefix": "src:insert-tsdoc",
+		"body": [
+			"/**",
+			" * Determine whether the payload is `${1:what}` or not.",
+			" * ",
+			" * @param payload An object to be determined",
+			" */",
+		],
+	}
+}
